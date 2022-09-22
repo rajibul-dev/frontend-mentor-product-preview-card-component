@@ -1,0 +1,166 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800;900&family=Montserrat:wght@400;500;700&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+
+  --color-bg: hsl(30, 38%, 92%);
+
+  --green-primary: hsl(158, 36%, 37%);
+  --green-primary-hover: hsl(159, 57%, 20%);
+
+  --color-p: hsl(228, 12%, 48%);
+  --color-h: hsl(212, 21%, 14%);
+
+  --font-size-p: 1.4rem;
+  --font-size-h: 3.2rem;
+
+  --font-weight-p: 400;
+  --font-weight-m: 500;
+  --font-weight-h: 900;
+
+  --line-height-p: 1.6;
+  --line-height-h: 1;
+
+  --border-radious: 8px;
+
+  --montserrat: "Montserrat", sans-serif;
+  --fraunces: "'Fraunces", serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: var(--color-bg);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 5%;
+}
+
+.img {
+  width: 48%;
+}
+
+.container {
+  background-color: var(--white);
+  max-width: 55rem;
+  border-radius: var(--border-radious);
+  overflow: hidden;
+}
+
+.h1,
+.price {
+  font-family: var(--fraunces);
+}
+
+.p,
+.not-price,
+.btn {
+  font-family: var(--montserrat);
+  font-size: var(--font-size-p);
+}
+
+.textfield {
+  padding: 3rem 4rem;
+}
+
+.perfume-text {
+  color: var(--color-p);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: var(--montserrat);
+  font-weight: var(--font-weight-m);
+  letter-spacing: 3pt;
+  margin-bottom: 1.8rem;
+  display: block;
+}
+
+.h1 {
+  line-height: var(--line-height-h);
+  font-size: var(--font-size-h);
+  font-weight: var(--font-weight-h);
+  color: var(--color-h);
+  margin-bottom: 2.2rem;
+}
+
+.p {
+  font-weight: var(--font-weight-p);
+  color: var(--color-p);
+  line-height: var(--line-height-p);
+  margin-bottom: 2.4rem;
+}
+
+.pricing {
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.price {
+  color: var(--green-primary);
+  font-weight: var(--font-weight-h);
+  font-size: var(--font-size-h);
+}
+
+.not-price {
+  text-decoration: line-through;
+}
+
+.btn {
+  margin-top: 2.2rem;
+  font-weight: var(--font-weight-m);
+  background-color: var(--green-primary);
+  color: var(--white);
+  text-align: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1.4rem 0;
+  border-radius: var(--border-radious);
+  transition: all 0.1s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--green-primary-hover);
+}
+
+@media (max-width: 37em) {
+  body {
+    height: auto;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .img {
+    width: 100%;
+    height: 28rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .textfield {
+    padding: 3rem 2rem;
+  }
+}
