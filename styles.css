@@ -155,6 +155,21 @@ body {
   html {
     font-size: 58% !important;
   }
+
+  .h1 {
+    font-size: 3.6rem;
+  }
+
+  .p,
+  .btn,
+  .not-price {
+    font-size: 1.7rem;
+  }
+
+  .p {
+    margin-bottom: 2.8rem;
+  }
+
   body {
     height: auto;
     padding-top: 3.2rem;
